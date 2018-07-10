@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,22 +6,35 @@
     <title>GiphTasic Animal Giphy Fun</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="reset.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/reset.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style.css"/>
 
 </head>
 <body>
-    <div id="animal-buttons">
 
-    </div>
-    <form id="animal-form">
-        <label for="animal-input">Add an animal!</label>
-        <label type="text" id="animal-input"></label>
+    <div class="container">
+        <h1>Animal Search</h1>
+    
+        <div id="animal-buttons">
+            <button data-animal="cats">Cats</button>
+            <button data-animal="dogs">Dogs</button>
+            <button data-animal="babyGoats">Baby Goats</button>
+            <button data-animal="piglets">Piglets</button>
+            <button data-animal="parrots">Parrots</button>
+            <button data-animal="polarBears">PolarBears</button>
+        </div>
 
-        <input id="addAnimal" type="submit" value="Submit">
-    </form>
+        <!-- Add your own animal field and button -->
+        <form id="animal-form">
+            <input for="animal-input"></input>
+            <label type="text" id="animal-input"></label>
 
-    <div id="animals">
+            <!-- Button to trigger the addition of a new animal for giphy category -->
+            <input id="addAnimal" type="submit" value="Add a new Animal!">
+        </form>
+
+         <!-- Giphies will get dumped here -->       
+        <div id="animals"></div>
 
     </div>
 

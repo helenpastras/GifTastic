@@ -25,16 +25,22 @@
         </div>
 
         <!-- Add your own animal field and button -->
-        <form id="animal-form">
-            <input for="animal-input"></input>
-            <label type="text" id="animal-input"></label>
-
-            <!-- Button to trigger the addition of a new animal for giphy category -->
-            <input id="addAnimal" type="submit" value="Add a new Animal!">
-        </form>
-
-         <!-- Giphies will get dumped here -->       
-        <div id="animals"></div>
+        <div class = "row">
+             <div class = "col-md-8">
+                <!-- Giphies will get dumped here -->       
+                <div id="animals"></div>
+            </div>
+            <div class = "col-md-4">
+                <form id="animal-form">
+                    <input for="animal-input"></input>
+                    <label type="text" id="animal-input"></label>
+                <!-- Button to trigger the addition of a new animal for giphy category -->
+                    <input id="addAnimal" type="submit" value="Add a new Animal!">
+                </form>
+             </div>
+        </div>
+        
+       
 
     </div>
 

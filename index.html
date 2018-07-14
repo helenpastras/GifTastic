@@ -13,8 +13,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <!-- CSS Styling     -->
-    <link rel="stylesheet" type="text/css" media="screen" href="/reset.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="/style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
 
 </head>
 <body>
@@ -22,31 +22,30 @@
     <div class="container">
         <h1>Animal Search</h1>
     
-        <div>
-            <button data-animal="cats">Cats</button>
-            <button data-animal="dogs">Dogs</button>
-            <button data-animal="baby goats">Baby Goats</button>
-            <button data-animal="piglets">Piglets</button>
-            <button data-animal="parrots">Parrots</button>
-            <button data-animal="polar bears">Polar Bears</button>
-        </div>
-
-        <!-- Add your own animal field and button -->
         <div class = "row">
-             <div class = "col-md-8">
-                <!-- Giphies will get dumped here -->       
-                <div id="animals"></div>
+            <div class = "col-md-8">
+                <button data-animal="cats">Cats</button>
+                <button data-animal="dogs">Dogs</button>
+                <button data-animal="baby goats">Baby Goats</button>
+                <button data-animal="piglets">Piglets</button>
+                <button data-animal="parrots">Parrots</button>
+                <button data-animal="polar bears">Polar Bears</button>
             </div>
             <div class = "col-md-4">
                 <form id="animal-form">
                     <input for="animal-input"></input>
                     <label type="text" id="animal-input"></label>
-                <!-- Button to trigger the addition of a new animal for giphy category -->
+                    <!-- Button to trigger the addition of a new animal for giphy category -->
                     <input id="addAnimal" type="submit" value="Add a new Animal!">
                 </form>
-             </div>
-        </div>  
+            </div>
+        </div>
 
+        <!-- Giphies will get dumped here -->   
+        <div id="animals">    
+            <p></p>  
+            <div class= "gif"><img></div>      
+        </div>
     </div>
 
     <!-- jQuery -->

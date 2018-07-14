@@ -2,7 +2,18 @@
 $("button").on("click", function() {
     // In this case, the "this" keyword refers to the button that was clicked
     var animals = $(this).attr("data-animal");
-    
+
+    // Adding the new animal through the Add Animal button
+    $("#addAnimal").on("click",function(event){
+        even.preventDefault();
+
+        var newAnimal = $("#animal-input").val.trim();
+        animals.push(newAnimal);
+
+        renderButtons();
+        $("button").append(animals);
+        renderButtons();
+    });    
 
     // Constructing a URL to search Giphy for the name of the animal button clicked
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=DPvJg8Pk57QWmP9WKLaf1wVQZXjcOWiS&q=" + animals + "&limit=10&offset=0&rating=G&lang=en";
@@ -35,18 +46,18 @@ $("button").on("click", function() {
             // Creating and storing an image tag
             var animalImage = $("<img>");
             // Setting the src attribute of the image to a property pulled off the result item
-            animalImage.attr("src", results[i].images.fixed_height.url);
+            animalImage.attr("src", results[i].images.fixed_height_still.url);
 
             // Appending the paragraph and image tag to the animalDiv
-            animalDiv.append(p);
             animalDiv.append(animalImage);
+            animalDiv.append(p);
 
             // Prependng the animalDiv to the HTML page in the "#animals" div
             $("#animals").prepend(animalDiv);
 
-             $("#animals").on("click", function() {
+            $(".gif").on("click",function() {
                 // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-                var state = $(this).attr("data-animal");
+                var state = $(this).attr("data-state");
                 // If the clicked image's state is still, update its src attribute to what its data-animate value is.
                 // Then, set the image's data-state to animate
                 // Else set src to the data-still value
@@ -57,7 +68,9 @@ $("button").on("click", function() {
                   $(this).attr("src", $(this).attr("data-still"));
                   $(this).attr("data-state", "still");
                 }
-            });               
+            });  
         }
+        
+        
     });
 });
